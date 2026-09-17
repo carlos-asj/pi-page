@@ -1,0 +1,71 @@
+.tela {
+  display: none;
+}
+.tela.ativa {
+  display: block;
+}
+
+body {
+  font-size: 16pt;
+}
+
+.title {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#loginForm {
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.loginMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.input {
+  height: 30px;
+  padding: 8px;
+  font-size: 14pt;
+  border-radius: 10px;
+}
+
+#btentrar {
+  height: 50px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 14pt;
+}
+
+#erro {
+  text-align: center;
+  color: red;
+}

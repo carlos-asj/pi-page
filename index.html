@@ -4,21 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
   </head>
   <body>
-    <div>
-      <h1 style="text-align: center">LOGIN</h1>
-    </div>
-    <div>
-      <form id="loginForm">
-        <label>USUÁRIO: </label>
-        <input type="text" id="usuario" />
-        <label>SENHA: </label>
-        <input type="password" id="senha" />
-        <button type="submit">Entrar</button>
-        <p id="erro"></p>
-      </form>
-    </div>
+    <button id="btnVoltar" onclick="voltar()" style="display: none">
+      Voltar
+    </button>
+    <section id="login" class="tela ativa">
+      <div>
+        <h1 class="title">LOGIN</h1>
+      </div>
+      <div class="login">
+        <form id="loginForm">
+          <div class="formContainer">
+            <div class="user">
+              <label>Usuário</label>
+              <input type="text" class="input" id="usuario" required />
+            </div>
+            <div class="password">
+              <label>Senha</label>
+              <input type="password" class="input" id="senha" required />
+            </div>
+            <button type="submit" id="btentrar">Entrar</button>
+            <p id="erro"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="dados" class="tela">
+      <h1 class="title">Complete seu cadastro</h1>
+      <div class="loginMain">
+        <form action="" id="formData">
+          <div class="formContainer">
+            <div class="user">
+              <label for="">Nome completo</label>
+              <input type="text" class="input" id="nome" />
+            </div>
+            <div class="user">
+              <label for="">CPF</label>
+              <input type="text" class="input" id="cpf" />
+            </div>
+            <div class="user">
+              <label for="">Faculdade</label>
+              <input type="text" class="input" id="faculdade" />
+            </div>
+            <div class="user">
+              <label for="">Contato</label>
+              <input type="text" class="input" id="contato" />
+            </div>
+            <button type="submit" id="btentrar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="rota" class="tela">
+      <h1 class="title">Olá, <span id="nomeUser"></span></h1>
+      <div>
+        <div>Hoje, quinta-feira, 17 de setembro</div>
+        Porto Seguro x Eunápolis
+      </div>
+      <div><button onclick="presY()">Confirmar presença</button></div>
+      <span id="qrCodeBtn" class="hidden""
+        ><button onclick="irPara('lerQr')">Ler QR Code</button></span
+      >
+    </section>
+
+    <section id="lerQr" class="tela">
+      <h1 class="title">Ler QR Code</h1>
+  <video id="video" playsinline style="width: 100%; border-radius: 12px;"></video>
+  <canvas id="canvas" style="display: none;"></canvas>
+  <p id="qrErro"></p>
+    </section>
+
+    <section id="sucesso" class="tela">
+      <h1 class="title">Presença confirmada!</h1>
+  <p>Sua presença na viagem de hoje foi registrada com sucesso.</p>
+    </section>
 
     <script src="script.js"></script>
   </body>
