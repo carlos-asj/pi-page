@@ -44,7 +44,7 @@
             </div>
             <div class="user">
               <label for="">CPF</label>
-              <input type="text" class="input" id="cpf" />
+              <input type="text" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"  placeholder="999.999.999-99" class="input" id="cpf" />
             </div>
             <div class="user">
               <label for="">Faculdade</label>
@@ -52,7 +52,7 @@
             </div>
             <div class="user">
               <label for="">Contato</label>
-              <input type="text" class="input" id="contato" />
+              <input type="number" placeholder="(73) 98196-6038" class="input" id="contato" />
             </div>
             <button type="submit" id="btentrar">Salvar</button>
           </div>
